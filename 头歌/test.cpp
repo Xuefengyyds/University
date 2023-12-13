@@ -1,10 +1,15 @@
-  #include<iostream>
-    using namespace std;
-    int main(void)
-    {
-       int a=1,b=0; 
-       if(a!=1)cout<<1<<endl;
-       else if(b=0)cout<<2<<endl;        //把1赋值给b，条件为真
-       else cout<<3<<endl;
-       return 0;
-    }
+#include<iostream>
+using namespace std;
+int main(){
+
+ float x=2.5;
+    char c(65);
+    int y=x;              // ①
+    int & r;                // ②
+    int &rc=c;           // ③
+    float &px=& x;     // ④
+    char *pc=c;          // ⑤
+
+	system("pause");
+    return 0;
+}
