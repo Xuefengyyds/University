@@ -1,15 +1,11 @@
-#include<iostream>
-using namespace std;
-int main(){
+   #include<iostream>
+    using namespace std;
 
- float x=2.5;
-    char c(65);
-    int y=x;              // ①
-    int & r;                // ②
-    int &rc=c;           // ③
-    float &px=& x;     // ④
-    char *pc=c;          // ⑤
+    int main( )
+    {  
+ char str[]="12345\0abcde",*s=str;
+ cout<<sizeof(str);
 
-	system("pause");
-    return 0;
-}
+
+    }
+ 
