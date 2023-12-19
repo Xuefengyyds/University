@@ -5,4 +5,4 @@
 2. 动态扩展
 3. vector的迭代器支持随机访问的迭代器
 ## vector构造函数
-1. vector<T>
+1. vector< T >
