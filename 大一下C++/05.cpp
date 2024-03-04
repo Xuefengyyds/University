@@ -17,9 +17,17 @@ public:
     ~Palindrome() {
         delete[] binaryDigits;
     }
+    
+    bool isDecimalPalindrome(int num);
+    void convertToBinary();
+    bool isBinaryPalindrome();
+    void huiwen();
+    void show();
+
+};
 
     // 判断整数是否为回文（十进制）
-    bool isDecimalPalindrome(int num) {
+bool Palindrome::isDecimalPalindrome(int num) {
         int original = num;
         int reversed = 0;
         while (original > 0) {
@@ -30,7 +38,7 @@ public:
     }
 
     // 将整数转换为二进制形式并存储在 binaryDigits 数组中
-    void convertToBinary() {
+void Palindrome::convertToBinary() {
         int temp = n;
         binarySize = 0;
         while (temp > 0) {
@@ -46,7 +54,7 @@ public:
     }
 
     // 判断二进制数是否为回文
-    bool isBinaryPalindrome() {
+bool Palindrome::isBinaryPalindrome() {
         int left = 0;
         int right = binarySize - 1;
         while (left < right) {
@@ -60,7 +68,7 @@ public:
     }
 
     // 判断整数是否为绝对回文数
-    void huiwen() {
+void Palindrome::huiwen() {
         // 首先转换为二进制形式
         convertToBinary();
         // 然后判断十进制和二进制是否都是回文
@@ -72,7 +80,7 @@ public:
     }
 
     // 显示结果
-    void show() {
+void Palindrome::show() {
         // 先判断是否为绝对回文数
         huiwen();
         // 然后根据结果输出
@@ -82,7 +90,7 @@ public:
             cout << n << " 不是绝对回文数。" << endl;
         }
     }
-};
+
 
 int main() {
     int a;

@@ -9,8 +9,14 @@ private:
     int flag; // 标记替换是否完成替换
 
 public:
-    // 构造函数
-    CString(char *s, char s1[], char *s2) {
+    CString(char *s, char s1[], char *s2); // 构造函数
+    ~CString();
+    void Replace();
+    void Show();
+};
+
+// 构造函数
+CString::CString(char *s, char s1[], char *s2) {
         str = new char[strlen(s) + 1]; // 分配内存给原始字符串
         strcpy(str, s); // 拷贝原始字符串内容
         str1 = new char[strlen(s1) + 1]; // 分配内存给目标关键字
@@ -21,14 +27,14 @@ public:
     }
 
     // 析构函数
-    ~CString() {
+CString::~CString() {
         delete[] str; // 释放原始字符串内存
         delete[] str1; // 释放目标关键字内存
         delete[] str2; // 释放替换关键字内存
     }
 
     // 替换函数
-    void Replace() {
+void CString::Replace() {
         int len1 = strlen(str1);
         int len2 = strlen(str2);
         int strLen = strlen(str);
@@ -43,7 +49,7 @@ public:
     }
 
     // 显示函数
-    void Show() {
+void CString::Show() {
         if (flag) {
             std::cout << "目标关键字: " << str1 << std::endl;
             std::cout << "替换关键字: " << str2 << std::endl;
@@ -52,7 +58,6 @@ public:
             std::cout << "原始字符串: " << str << std::endl;
         }
     }
-};
 
 int main() {
     // 定义原始字符串、目标关键字和替换关键字
