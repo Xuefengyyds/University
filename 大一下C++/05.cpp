@@ -96,6 +96,7 @@ int main() {
     int a;
     cout << "请输入一个整数：";
     cin >> a;
+   
     Palindrome p(a);
     p.show();
     return 0;
